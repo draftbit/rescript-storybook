@@ -1,0 +1,25 @@
+{
+  "name": "bs-storybook",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "bsb -make-world",
+    "test": "echo XXX TODO",
+    "dev": "bsb -make-world -w",
+    "clean": "bsb -clean-world"
+  },
+  "keywords": ["BuckleScript"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "bs-platform": "^2.1.0",
+    "prettier": "^1.10.2"
+  },
+  "dependencies": {
+    "reason-react": "^0.3.0"
+  },
+  "peerDependencies": {
+    "@storybook/addon-actions": "^3.2.17",
+    "@storybook/addon-knobs": "^3.3.3",
+    "@storybook/react": "^3.2.17"
+  }
+}
