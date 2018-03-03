@@ -4,6 +4,6 @@
   "version": "0.1.0",
   "sources": ["src"],
   "bs-dependencies": ["reason-react"],
-  "namespace": true,
+  "reason": { "react-jsx": 2 },
   "refmt": 3
 }
