@@ -20,6 +20,7 @@
   "peerDependencies": {
     "@storybook/addon-actions": "^3.2.17",
     "@storybook/addon-knobs": "^3.3.3",
+    "@storybook/addons": "^3.3.14",
     "@storybook/react": "^3.2.17"
   }
 }
