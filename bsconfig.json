@@ -1,5 +1,6 @@
 {
   "name": "bs-storybook",
+  "namespace": true,
   "bsc-flags": ["-bs-super-errors"],
   "version": "0.1.0",
   "sources": ["src"],
