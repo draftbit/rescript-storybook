@@ -2,7 +2,8 @@
 
 BuckleScript bindings for Storybook.js! The goal of this project is to provide bindings for the main Storybook API, as well as the official add-ons. Currently it supports:
  * [actions](https://github.com/storybooks/storybook/tree/master/addons/actions)
- * [knobs](https://github.com/storybooks/storybook/tree/master/addons/knobs).
+ * [knobs](https://github.com/storybooks/storybook/tree/master/addons/knobs)
+ * [addons API](https://storybook.js.org/addons/writing-addons/)
 
 ## Getting Started
 
