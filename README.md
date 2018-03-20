@@ -7,9 +7,15 @@ BuckleScript bindings for Storybook.js! The goal of this project is to provide b
 
 ## Getting Started
 
-After installing this package, add it to your `bsconfig.json` as a dependency.
+First install this package:
 
-Get Storybook up and running according to their docs. This library does not attempt to provide a way to configure storybook in Reason - just use the standard JS configs.
+```bash
+npm install bs-storybook
+```
+
+Next, you'll need to add `bs-storybook` to your `bsconfig.json` as a dependency.
+
+Then, get Storybook up and running according to [their docs](https://storybook.js.org/basics/quick-start-guide/). (*Note:* This library does not attempt to provide a way to configure storybook in Reason - just use the standard JS configs.)
 
 In your `/.storybook/config.js`, import your stories from wherever your compiled Reason modules end up. For example, if you're writing your stories inside a `__stories__` directory, and `bsb` is configured for a standard build, you might do something like:
 
