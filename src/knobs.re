@@ -1,34 +1,35 @@
 [@bs.val] [@bs.module "@storybook/addon-knobs/react"]
-external withKnobs : Main.decorator =
-  "";
+external withKnobs : Main.decorator = "";
 
 [@bs.val] [@bs.module "@storybook/addon-knobs/react"]
-external extText : (string, Js.null_undefined(string)) => string =
-  "text";
+external extText : (string, Js.null_undefined(string)) => string = "text";
 
 let text = (~label: string, ~defaultValue: option(string)=?, ()) =>
-  extText(label, Js.Nullable.from_opt(defaultValue));
+  extText(label, Js.Nullable.fromOption(defaultValue));
 
 [@bs.val] [@bs.module "@storybook/addon-knobs/react"]
-external extBoolean : (string, Js.boolean) => Js.boolean =
-  "boolean";
+external extBoolean : (string, bool) => bool = "boolean";
 
-let boolean = (~label: string, ~defaultValue=Js.false_, ()) =>
-  Js.to_bool(extBoolean(label, defaultValue));
+let boolean = (~label: string, ~defaultValue=false, ()) =>
+  extBoolean(label, defaultValue);
 
 type jsRangeConfig = {
   .
-  "range": Js.boolean, "min": float, "max": float, "step": float
+  "range": bool,
+  "min": float,
+  "max": float,
+  "step": float,
 };
 
 [@bs.val] [@bs.module "@storybook/addon-knobs/react"]
-external extNumber : (string, float, Js.null_undefined(jsRangeConfig)) => float =
+external extNumber :
+  (string, float, Js.null_undefined(jsRangeConfig)) => float =
   "number";
 
 type rangeConfig = {
   min: float,
   max: float,
-  step: float
+  step: float,
 };
 
 let number =
@@ -36,27 +37,21 @@ let number =
       ~label: string,
       ~defaultValue=0.,
       ~rangeConfiguration: option(rangeConfig)=?,
-      ()
+      (),
     )
     : float =>
-  switch rangeConfiguration {
+  switch (rangeConfiguration) {
   | None => extNumber(label, defaultValue, Js.Nullable.undefined)
   | Some(c) =>
-    let config = {
-      "range": Js.true_,
-      "min": c.min,
-      "max": c.max,
-      "step": c.step
-    };
-    extNumber(label, defaultValue, Js.Nullable.return(config))
+    let config = {"range": true, "min": c.min, "max": c.max, "step": c.step};
+    extNumber(label, defaultValue, Js.Nullable.return(config));
   };
 
 [@bs.val] [@bs.module "@storybook/addon-knobs/react"]
-external extColor : (string, Js.null_undefined(string)) => string =
-  "color";
+external extColor : (string, Js.null_undefined(string)) => string = "color";
 
 let color = (~label: string, ~defaultValue: option(string)=?, ()) =>
-  extColor(label, Js.Nullable.from_opt(defaultValue));
+  extColor(label, Js.Nullable.fromOption(defaultValue));
 
 type selectConfig('a) = 'a;
 
@@ -70,19 +65,20 @@ let select =
       ~label: string,
       ~options: selectConfig('a),
       ~defaultValue: option(string)=?,
-      ()
+      (),
     ) =>
-  extSelect(label, options, Js.Nullable.from_opt(defaultValue));
+  extSelect(label, options, Js.Nullable.fromOption(defaultValue));
 
 [@bs.val] [@bs.module "@storybook/addon-knobs/react"]
-external extDate : (string, Js.null_undefined(Js_date.t)) => string =
-  "date";
+external extDate : (string, Js.null_undefined(Js_date.t)) => string = "date";
 
 let date = (~label: string, ~defaultValue: option(Js_date.t)=?, ()) =>
-  extDate(label, Js.Nullable.from_opt(defaultValue));
+  extDate(label, Js.Nullable.fromOption(defaultValue));
+
+type button;
 
 [@bs.val] [@bs.module "@storybook/addon-knobs/react"]
-external extButton : (string, ReactEventRe.Mouse.t => unit) => unit =
+external extButton : (string, ReactEventRe.Mouse.t => unit) => button =
   "button";
 
 let button = (~label: string, ~handler: ReactEventRe.Mouse.t => unit, ()) =>
