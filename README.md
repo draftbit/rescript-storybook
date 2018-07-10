@@ -1,9 +1,10 @@
 # bs-storybook
 
 BuckleScript bindings for Storybook.js! The goal of this project is to provide bindings for the main Storybook API, as well as the official add-ons. Currently it supports:
- * [actions](https://github.com/storybooks/storybook/tree/master/addons/actions)
- * [knobs](https://github.com/storybooks/storybook/tree/master/addons/knobs)
- * [addons API](https://storybook.js.org/addons/writing-addons/)
+
+* [actions](https://github.com/storybooks/storybook/tree/master/addons/actions)
+* [knobs](https://github.com/storybooks/storybook/tree/master/addons/knobs)
+* [addons API](https://storybook.js.org/addons/writing-addons/)
 
 ## Getting Started
 
@@ -15,17 +16,17 @@ npm install bs-storybook
 
 Next, you'll need to add `bs-storybook` to your `bsconfig.json` as a dependency.
 
-Then, get Storybook up and running according to [their docs](https://storybook.js.org/basics/quick-start-guide/). (*Note:* This library does not attempt to provide a way to configure storybook in Reason - just use the standard JS configs.)
+Then, get Storybook up and running according to [their docs](https://storybook.js.org/basics/quick-start-guide/). (_Note:_ This library does not attempt to provide a way to configure storybook in Reason - just use the standard JS configs.)
 
 In your `/.storybook/config.js`, import your stories from wherever your compiled Reason modules end up. For example, if you're writing your stories inside a `__stories__` directory, and `bsb` is configured for a standard build, you might do something like:
 
 ```javascript
-const req = require.context('../lib/js', true, /\__stories__\/.*.js$/)
+const req = require.context('../lib/js', true, /\__stories__\/.*.js$/);
 configure(() => {
   req.keys().forEach(module => {
     req(module).default();
-  })
-}, module)
+  });
+}, module);
 ```
 
 Note that in the above example, we're assuming the convention of each module containing a function as the `default` export. We'll account for that when writing our stories in the next section.
@@ -35,25 +36,18 @@ Note that in the above example, we're assuming the convention of each module con
 Here's a basic story in its entirety:
 
 ```reason
-open BsStorybook.Main;
+open BsStorybook.Story;
 
 let _module = [%bs.raw "module"];
 
-let default = () => {
-  let myStory =
-    createStory(~title="My First Reason Story", ~decorators=[], ~_module, ());
-  myStory.add(
-    "first chapter",
-    () => <span> (ReasonReact.stringToElement("Hello bs-storybook!")) </span>
-  )
-};
+storiesOf("My First Reason Story", _module)
+|. addDecorator()
+|. add("first chapter", () =>
+     <span> (ReasonReact.stringToElement("Hello bs-storybook!")) </span>
+   );
 ```
 
-Storybook uses a reference to the `module` global provided by webpack to facilitate hot-reloading. We'll access that via the `[%bs.raw]` decorator. We're also wrapping the story definition in a `default` function to make it work with the way we've configured storybook. There's nothing enforcing this convention - you can choose to use another export name if you'd like.
-
-We create a story using `createStory`, and pass it the story's title, any decorators we'd like to use (in the above example, we're not using any), and the module reference we created.
-
-From there, we can add to the story using essentially the same API as the JS version of storybook: call `add()` and pass a string + a function that returns a React element.
+Storybook uses a reference to the `module` global provided by webpack to facilitate hot-reloading. We'll access that via the `[%bs.raw]` decorator.
 
 ## The Actions Addon
 
