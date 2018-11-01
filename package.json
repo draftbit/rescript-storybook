@@ -1,6 +1,6 @@
 {
   "name": "bs-storybook",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "BuckleScript bindings for Storybook.js",
   "scripts": {
     "build": "bsb -make-world",
@@ -11,15 +11,21 @@
   "homepage": "https://github.com/MyWellGiving/bs-storybook",
   "repository": "https://github.com/MyWellGiving/bs-storybook",
   "bugs": "https://github.com/MyWellGiving/bs-storybook/issues",
-  "keywords": ["BuckleScript", "Storybook.js", "ReasonML", "react", "ui"],
+  "keywords": [
+    "BuckleScript",
+    "Storybook.js",
+    "ReasonML",
+    "react",
+    "ui"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "bs-platform": "^3.1.5",
+    "bs-platform": "^4.0.4",
     "prettier": "^1.10.2"
   },
   "dependencies": {
-    "reason-react": "^0.4.2"
+    "reason-react": "^0.5.3"
   },
   "peerDependencies": {
     "@storybook/addon-actions": "^3.2.17",
