@@ -23,10 +23,12 @@
     "bs-platform": "^7.0.1"
   },
   "peerDependencies": {
-    "reason-react": "^0.7.0",
-    "@storybook/addon-actions": "^3.2.17",
-    "@storybook/addon-knobs": "^3.3.3",
-    "@storybook/addons": "^3.3.14",
-    "@storybook/react": "^3.2.17"
+    "reason-react": "^0.7.1",
+    "@storybook/addon-actions": "^5.2.3",
+    "@storybook/addon-knobs": "^5.3.14",
+    "@storybook/addon-links": "^5.2.3",
+    "@storybook/addon-options": "^5.3.14",
+    "@storybook/addons": "^5.2.3",
+    "@storybook/react": "^5.2.3"
   }
 }
