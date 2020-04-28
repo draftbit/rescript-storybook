@@ -1,16 +1,15 @@
 {
   "name": "bs-storybook",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "BuckleScript bindings for Storybook.js",
   "scripts": {
     "build": "bsb -make-world",
-    "test": "echo XXX TODO",
     "dev": "bsb -make-world -w",
     "clean": "bsb -clean-world"
   },
-  "homepage": "https://github.com/MyWellGiving/bs-storybook",
-  "repository": "https://github.com/MyWellGiving/bs-storybook",
-  "bugs": "https://github.com/MyWellGiving/bs-storybook/issues",
+  "homepage": "https://github.com/draftbit/bs-storybook",
+  "repository": "https://github.com/draftbit/bs-storybook",
+  "bugs": "https://github.com/draftbit/bs-storybook/issues",
   "keywords": [
     "BuckleScript",
     "Storybook.js",
@@ -21,15 +20,15 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "bs-platform": "^4.0.4"
-  },
-  "dependencies": {
-    "reason-react": "^0.5.3"
+    "bs-platform": "^7.0.1"
   },
   "peerDependencies": {
-    "@storybook/addon-actions": "^3.2.17",
-    "@storybook/addon-knobs": "^3.3.3",
-    "@storybook/addons": "^3.3.14",
-    "@storybook/react": "^3.2.17"
+    "reason-react": "^0.7.1",
+    "@storybook/addon-actions": "^5.2.3",
+    "@storybook/addon-knobs": "^5.3.14",
+    "@storybook/addon-links": "^5.2.3",
+    "@storybook/addon-options": "^5.3.14",
+    "@storybook/addons": "^5.2.3",
+    "@storybook/react": "^5.2.3"
   }
 }
