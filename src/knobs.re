@@ -1,5 +1,5 @@
 [@bs.val] [@bs.module "@storybook/addon-knobs/react"]
-external withKnobs: Main.decorator = "";
+external withKnobs: Main.decorator;
 
 [@bs.val] [@bs.module "@storybook/addon-knobs/react"]
 external extText: (string, Js.null_undefined(string)) => string = "text";
