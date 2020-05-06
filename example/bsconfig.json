@@ -1,19 +1,36 @@
 {
   "name": "storybook-test",
   "namespace": false,
-  "reason": { "react-jsx": 3 },
+  "reason": {
+    "react-jsx": 3
+  },
   "refmt": 3,
-  "bs-dependencies": ["reason-react"],
+  "bs-dependencies": [
+    "reason-react"
+  ],
   "ppx-flags": [],
   "sources": [
-    { "dir": "src", "subdirs": true },
-    { "dir": "bindings", "subdirs": true },
-    { "dir": "stories", "subdirs": true }
+    {
+      "dir": "src",
+      "subdirs": true
+    },
+    {
+      "dir": "bindings",
+      "subdirs": true
+    },
+    {
+      "dir": "stories",
+      "subdirs": true
+    }
   ],
   "package-specs": {
     "module": "es6",
     "in-source": true
   },
   "suffix": ".bs.js",
-  "bsc-flags": ["-bs-no-version-header", "-bs-super-errors", "-bs-g"]
+  "bsc-flags": [
+    "-bs-no-version-header",
+    "-bs-super-errors",
+    "-bs-g"
+  ]
 }
