@@ -145,9 +145,9 @@ The number type works with floats. If no `defaultValue` is provided, it will pas
 let num1 = Knobs.number(~label="Number 1", ());
 let num2 =
   Knobs.number(
-		~label="Number 2",
-		~rangeConfiguration={range: true, min: 0., max: 10., step: 1.},
-		()
+    ~label="Number 2",
+    ~rangeConfiguration={range: true, min: 0., max: 10., step: 1.},
+    ()
   );
 ```
 
@@ -195,18 +195,18 @@ let obj = Knobs.object_(~label="User", ~defaultValue={"color": "grey"}, ());
 ```reason
 let options =
   Js.Dict.fromArray([|
-		("Red", "red"),
-		("Blue", "blue"),
-		("Yellow", "yellow"),
-		("None", ""),
+    ("Red", "red"),
+    ("Blue", "blue"),
+    ("Yellow", "yellow"),
+    ("None", ""),
   |]);
 
 let color =
   Knobs.selectFromDict(
-		~label="MySelection",
-		~options,
-		~defaultValue="red",
-		(),
+    ~label="MySelection",
+    ~options,
+    ~defaultValue="red",
+    (),
   );
 ```
 
@@ -215,9 +215,9 @@ let color =
 ```reason
 let color =
   Knobs.selectFromArray(
-		~label="MySelection",
-		~options=[|"red", "blue", "yellow"|],
-		~defaultValue="red",
-		(),
+    ~label="MySelection",
+    ~options=[|"red", "blue", "yellow"|],
+    ~defaultValue="red",
+    (),
   );
 ```
