@@ -64,7 +64,7 @@ Storybook uses a reference to the `module` global provided by webpack to facilit
 ## The Actions Addon
 
 The action addon's API is essentially unchanged from its JS implementation:
-> Make sure that you have @storybook/addon-actions in the config
+> Make sure that you have `@storybook/addon-actions` in the config
 
 ```reason
 let clickAction = Action.action("I Clicked The Button!");
