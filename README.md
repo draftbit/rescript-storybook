@@ -4,9 +4,9 @@ BuckleScript bindings for **[Storybook](https://storybook.js.org/)**.
 
 The goal of this project is to provide bindings for the main Storybook API, as well as the official add-ons. Currently it supports:
 
-* [actions](https://github.com/storybooks/storybook/tree/master/addons/actions)
-* [knobs](https://github.com/storybooks/storybook/tree/master/addons/knobs)
-* [addons API](https://storybook.js.org/addons/writing-addons/)
+- [actions](https://github.com/storybooks/storybook/tree/master/addons/actions)
+- [knobs](https://github.com/storybooks/storybook/tree/master/addons/knobs)
+- [addons API](https://storybook.js.org/addons/writing-addons/)
 
 ## Getting Started
 
@@ -26,9 +26,9 @@ In your `/.storybook/config.js`, import your stories from wherever your compiled
 For example, if you're writing your stories inside a `__stories__` directory, and `bsb` is configured for a standard build, you might do something like:
 
 ```javascript
-const req = require.context('../lib/js', true, /\__stories__\/.*.js$/);
+const req = require.context("../lib/js", true, /\__stories__\/.*.js$/);
 configure(() => {
-  req.keys().forEach(module => {
+  req.keys().forEach((module) => {
     req(module).default();
   });
 }, module);
@@ -39,8 +39,12 @@ or if you are using Storybook v6.
 ```javascript
 /* .storybook/main.js */
 module.exports = {
-  stories: ['../stories/**/*.js'],
-  addons: ['@storybook/addon-actions', '@storybook/addon-links', '@storybook/addon-knobs/register'],
+  stories: ["../stories/**/*.js"],
+  addons: [
+    "@storybook/addon-actions",
+    "@storybook/addon-links",
+    "@storybook/addon-knobs/register",
+  ],
 };
 ```
 
@@ -61,9 +65,24 @@ storiesOf("My First Reason Story", _module)
 
 Storybook uses a reference to the `module` global provided by webpack to facilitate hot-reloading. We'll access that via the `[%bs.raw]` decorator.
 
+## Writing a CSF Story
+
+If you'd prefer to use the newer [Component Story Format](https://storybook.js.org/docs/formats/component-story-format/), you can do that as well:
+
+```reason
+open BsStorybook;
+
+let default = CSF.make(~title="My CSF Story", ());
+
+let button = () => <MyButton />;
+
+button->CSF.addMeta(~name="Plain Button", ());
+```
+
 ## The Actions Addon
 
 The action addon's API is essentially unchanged from its JS implementation:
+
 > Make sure that you have `@storybook/addon-actions` in the config
 
 ```reason
@@ -75,6 +94,7 @@ let clickAction = Action.action("I Clicked The Button!");
 ## The Knobs Addon
 
 To use [knobs](https://github.com/storybooks/storybook/tree/master/addons/knobs) you have twoo ways:
+
 > Make sure that you have @storybook/addon-knobs/register in the config
 
 #### As a decorator
@@ -190,6 +210,7 @@ let obj = Knobs.object_(~label="User", ~defaultValue={"color": "grey"}, ());
 ```
 
 ### Js.Dict
+
 > https://bucklescript.github.io/bucklescript/api/Js.Dict.html
 
 ```reason
