@@ -12,7 +12,7 @@
     "reason-react"
   ],
   "reason": {
-    "react-jsx": 2
+    "react-jsx": 3
   },
   "refmt": 3
 }
