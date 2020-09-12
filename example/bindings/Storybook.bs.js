@@ -32,8 +32,8 @@ function text(label, defaultValue, param) {
   return React$1.text(label, Js_null_undefined.fromOption(defaultValue));
 }
 
-function $$boolean(label, defaultValueOpt, param) {
-  var defaultValue = defaultValueOpt !== undefined ? defaultValueOpt : false;
+function $$boolean(label, $staropt$star, param) {
+  var defaultValue = $staropt$star !== undefined ? $staropt$star : false;
   return React$1.boolean(label, defaultValue);
 }
 

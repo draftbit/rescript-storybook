@@ -6,7 +6,7 @@ type chapter = unit => ReasonReact.reactElement;
 
 type decorator = chapter => ReasonReact.reactElement;
 
-[@bs.val] [@bs.module "@storybook/react"]
+[@bs.module "@storybook/react"]
 external storiesOf: (string, webpackModule) => section;
 
 [@bs.send] external add: (section, string, chapter) => section;

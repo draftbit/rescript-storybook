@@ -46,7 +46,7 @@ let number =
     extNumber(label, defaultValue, Js.Nullable.return(config));
   };
 
-[@bs.val] [@bs.module "@storybook/addon-knobs/react"]
+[@bs.module "@storybook/addon-knobs/react"]
 external extColor: (string, Js.null_undefined(string)) => string = "color";
 
 let color = (~label: string, ~defaultValue: option(string)=?, ()) =>
@@ -54,7 +54,7 @@ let color = (~label: string, ~defaultValue: option(string)=?, ()) =>
 
 type selectConfig('a) = 'a;
 
-[@bs.val] [@bs.module "@storybook/addon-knobs/react"]
+[@bs.module "@storybook/addon-knobs/react"]
 external extSelect:
   (string, selectConfig('a), Js.null_undefined(string)) => string =
   "select";
@@ -68,7 +68,7 @@ let select =
     ) =>
   extSelect(label, options, Js.Nullable.fromOption(defaultValue));
 
-[@bs.val] [@bs.module "@storybook/addon-knobs/react"]
+[@bs.module "@storybook/addon-knobs/react"]
 external extDate: (string, Js.null_undefined(Js_date.t)) => string = "date";
 
 let date = (~label: string, ~defaultValue: option(Js_date.t)=?, ()) =>
@@ -76,7 +76,7 @@ let date = (~label: string, ~defaultValue: option(Js_date.t)=?, ()) =>
 
 type button;
 
-[@bs.val] [@bs.module "@storybook/addon-knobs/react"]
+[@bs.module "@storybook/addon-knobs/react"]
 external extButton: (string, ReactEvent.Mouse.t => unit) => button = "button";
 
 let button = (~label: string, ~handler: ReactEvent.Mouse.t => unit, ()) =>

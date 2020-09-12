@@ -7,7 +7,7 @@ module Story = {
 
   type decorator = chapter => ReasonReact.reactElement;
 
-  [@bs.val] [@bs.module "@storybook/react"]
+  [@bs.module "@storybook/react"]
   external storiesOf: (string, webpackModule) => section;
 
   [@bs.send] external add: (section, string, chapter) => section;
@@ -20,7 +20,7 @@ module Main = {
 
   type section;
 
-  [@bs.val] [@bs.module "@storybook/react"]
+  [@bs.module "@storybook/react"]
   external storiesOf: (string, 'a) => section;
 
   [@bs.send] external extAdd: (section, string, chapter) => unit = "add";
@@ -57,16 +57,16 @@ module Notes = {
 };
 
 module Knobs = {
-  [@bs.val] [@bs.module "@storybook/addon-knobs/react"]
+  [@bs.module "@storybook/addon-knobs/react"]
   external withKnobs: Main.decorator;
 
-  [@bs.val] [@bs.module "@storybook/addon-knobs/react"]
+  [@bs.module "@storybook/addon-knobs/react"]
   external extText: (string, Js.null_undefined(string)) => string = "text";
 
   let text = (~label: string, ~defaultValue: option(string)=?, ()) =>
     extText(label, Js.Nullable.fromOption(defaultValue));
 
-  [@bs.val] [@bs.module "@storybook/addon-knobs/react"]
+  [@bs.module "@storybook/addon-knobs/react"]
   external extBoolean: (string, bool) => bool = "boolean";
 
   let boolean = (~label: string, ~defaultValue=false, ()) =>
@@ -131,7 +131,7 @@ module Knobs = {
 
   type button;
 
-  [@bs.val] [@bs.module "@storybook/addon-knobs/react"]
+  [@bs.module "@storybook/addon-knobs/react"]
   external extButton: (string, ReactEvent.Mouse.t => unit) => button =
     "button";
 
@@ -179,7 +179,7 @@ module Addons = {
 module Action = {
   type actionHandler('a) = 'a => unit;
 
-  [@bs.val] [@bs.module "@storybook/addon-actions"]
+  [@bs.module "@storybook/addon-actions"]
   external action: string => actionHandler('a);
 };
 
