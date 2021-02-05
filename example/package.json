@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "reason-react": "^0.7.1"
+    "reason-react": "^0.9.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
@@ -14,7 +14,7 @@
     "@storybook/addons": "^5.3.18",
     "@storybook/react": "^5.3.18",
     "babel-loader": "^8.1.0",
-    "bs-platform": "7.1.1"
+    "bs-platform": "8.4.2"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
