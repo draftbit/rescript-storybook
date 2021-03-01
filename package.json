@@ -24,12 +24,11 @@
     "reason-react": "^0.9.1"
   },
   "peerDependencies": {
-    "@storybook/addon-actions": "^5.2.3",
-    "@storybook/addon-knobs": "^5.3.14",
-    "@storybook/addon-links": "^5.2.3",
-    "@storybook/addon-options": "^5.3.14",
-    "@storybook/addons": "^5.2.3",
-    "@storybook/react": "^5.2.3",
+    "@storybook/addon-actions": "^6.1.20",
+    "@storybook/addon-knobs": "^6.1.20",
+    "@storybook/addon-links": "^6.1.20",
+    "@storybook/addons": "^6.1.20",
+    "@storybook/react": "^6.1.20",
     "reason-react": "^0.9.1"
   }
 }
