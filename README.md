@@ -1,5 +1,7 @@
 # bs-storybook
 
+
+
 BuckleScript bindings for **[Storybook](https://storybook.js.org/)**.
 
 The goal of this project is to provide bindings for the main Storybook API, as well as the official add-ons. Currently it supports:
@@ -15,6 +17,11 @@ First install this package:
 ```bash
 npm install bs-storybook
 ```
+
+## bs-platform versions
+
+- bs-platform 8.4.2 or higher requires `1.1.0`
+- anything lower uses `1.0.0`
 
 Next, you'll need to add `bs-storybook` to your `bsconfig.json` as a dependency.
 
