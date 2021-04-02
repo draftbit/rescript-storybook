@@ -85,9 +85,11 @@ storiesOf("My First Reason Story", _module)
        }
        ->React.string}
     </div>;
-  });
+  })
+->ignore;
 
 storiesOf("My Second Reason Story", _module)
 ->add("first chapter", () => {
     <span onClick={Action.action("Test")}> "HI"->React.string </span>
-  });
+  })
+->ignore;

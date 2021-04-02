@@ -1,13 +1,13 @@
-[@bs.val] [@bs.module "@storybook/addon-knobs/react"]
-external withKnobs: Main.decorator;
+[@bs.val] [@bs.module "@storybook/addon-knobs"]
+external withKnobs: Main.decorator = "withKnobs";
 
-[@bs.val] [@bs.module "@storybook/addon-knobs/react"]
+[@bs.val] [@bs.module "@storybook/addon-knobs"]
 external extText: (string, Js.null_undefined(string)) => string = "text";
 
 let text = (~label: string, ~defaultValue: option(string)=?, ()) =>
   extText(label, Js.Nullable.fromOption(defaultValue));
 
-[@bs.val] [@bs.module "@storybook/addon-knobs/react"]
+[@bs.val] [@bs.module "@storybook/addon-knobs"]
 external extBoolean: (string, bool) => bool = "boolean";
 
 let boolean = (~label: string, ~defaultValue=false, ()) =>
@@ -21,7 +21,7 @@ type jsRangeConfig = {
   "step": float,
 };
 
-[@bs.val] [@bs.module "@storybook/addon-knobs/react"]
+[@bs.val] [@bs.module "@storybook/addon-knobs"]
 external extNumber: (string, float, Js.null_undefined(jsRangeConfig)) => float =
   "number";
 
@@ -46,7 +46,7 @@ let number =
     extNumber(label, defaultValue, Js.Nullable.return(config));
   };
 
-[@bs.val] [@bs.module "@storybook/addon-knobs/react"]
+[@bs.val] [@bs.module "@storybook/addon-knobs"]
 external extColor: (string, Js.null_undefined(string)) => string = "color";
 
 let color = (~label: string, ~defaultValue: option(string)=?, ()) =>
@@ -54,7 +54,7 @@ let color = (~label: string, ~defaultValue: option(string)=?, ()) =>
 
 type selectConfig('a) = 'a;
 
-[@bs.val] [@bs.module "@storybook/addon-knobs/react"]
+[@bs.val] [@bs.module "@storybook/addon-knobs"]
 external extSelect:
   (string, selectConfig('a), Js.null_undefined(string)) => string =
   "select";
@@ -68,7 +68,7 @@ let select =
     ) =>
   extSelect(label, options, Js.Nullable.fromOption(defaultValue));
 
-[@bs.val] [@bs.module "@storybook/addon-knobs/react"]
+[@bs.val] [@bs.module "@storybook/addon-knobs"]
 external extDate: (string, Js.null_undefined(Js_date.t)) => string = "date";
 
 let date = (~label: string, ~defaultValue: option(Js_date.t)=?, ()) =>
@@ -76,7 +76,7 @@ let date = (~label: string, ~defaultValue: option(Js_date.t)=?, ()) =>
 
 type button;
 
-[@bs.val] [@bs.module "@storybook/addon-knobs/react"]
+[@bs.val] [@bs.module "@storybook/addon-knobs"]
 external extButton: (string, ReactEvent.Mouse.t => unit) => button = "button";
 
 let button = (~label: string, ~handler: ReactEvent.Mouse.t => unit, ()) =>

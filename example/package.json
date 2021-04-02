@@ -4,21 +4,25 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "reason-react": "^0.7.1"
+    "reason-react": "^0.9.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
-    "@storybook/addon-actions": "^5.3.18",
-    "@storybook/addon-knobs": "^5.3.18",
-    "@storybook/addon-links": "^5.3.18",
-    "@storybook/addons": "^5.3.18",
-    "@storybook/react": "^5.3.18",
+    "@storybook/addon-actions": "^6.1.20",
+    "@storybook/addon-knobs": "^6.1.20",
+    "@storybook/addon-links": "^6.1.20",
+    "@storybook/addons": "^6.1.20",
+    "@storybook/react": "^6.1.20",
     "babel-loader": "^8.1.0",
-    "bs-platform": "7.1.1"
+    "bs-platform": "8.4.2"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "bs:start": "bsb -make-world -w"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
