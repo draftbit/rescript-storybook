@@ -1,6 +1,6 @@
 {
   "name": "rescript-storybook",
-  "namespace": true,
+  "namespace": "storybook",
   "version": "0.1.0",
   "sources": [
     "src"
