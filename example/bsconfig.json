@@ -6,7 +6,7 @@
   },
   "refmt": 3,
   "bs-dependencies": [
-    "reason-react"
+    "@rescript/react"
   ],
   "ppx-flags": [],
   "sources": [
@@ -30,7 +30,6 @@
   "suffix": ".bs.js",
   "bsc-flags": [
     "-bs-no-version-header",
-    "-bs-super-errors",
     "-bs-g"
   ]
 }
