@@ -1,6 +1,6 @@
-# bs-storybook
+# rescript-storybook
 
-BuckleScript bindings for **[Storybook](https://storybook.js.org/)**.
+Rescript bindings for **[Storybook](https://storybook.js.org/)**.
 
 The goal of this project is to provide bindings for the main Storybook API, as well as the official add-ons. Currently it supports:
 
@@ -13,10 +13,10 @@ The goal of this project is to provide bindings for the main Storybook API, as w
 First install this package:
 
 ```bash
-npm install bs-storybook
+npm install rescript-storybook
 ```
 
-Next, you'll need to add `bs-storybook` to your `bsconfig.json` as a dependency.
+Next, you'll need to add `rescript-storybook` to your `bsconfig.json` as a dependency.
 
 Then, get Storybook up and running according to [their docs](https://storybook.js.org/basics/quick-start-guide/)
 
@@ -48,7 +48,7 @@ module.exports = {
 };
 ```
 
-Note that in the above example, we're assuming the convention of each module containing a function as the `default` export. bs-storybook is accountable for that while writting your stories:
+Note that in the above example, we're assuming the convention of each module containing a function as the `default` export. rescript-storybook is accountable for that while writting your stories:
 
 ## Writing a story
 
@@ -60,7 +60,7 @@ open BsStorybook.Story;
 let _module = [%bs.raw "module"];
 
 storiesOf("My First Reason Story", _module)
-->add("Chapter I", () => <span> {React.string("Hello bs-storybook!")} </span>);
+->add("Chapter I", () => <span> {React.string("Hello rescript-storybook!")} </span>);
 ```
 
 Storybook uses a reference to the `module` global provided by webpack to facilitate hot-reloading. We'll access that via the `[%bs.raw]` decorator.
