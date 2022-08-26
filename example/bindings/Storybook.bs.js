@@ -1,23 +1,23 @@
 
 
-import * as List from "bs-platform/lib/es6/list.js";
-import * as Belt_Option from "bs-platform/lib/es6/belt_Option.js";
+import * as List from "rescript/lib/es6/list.js";
+import * as Belt_Option from "rescript/lib/es6/belt_Option.js";
 import * as React from "@storybook/react";
-import * as Js_null_undefined from "bs-platform/lib/es6/js_null_undefined.js";
+import * as Js_null_undefined from "rescript/lib/es6/js_null_undefined.js";
 import * as React$1 from "@storybook/addon-knobs/react";
 
-var Story = { };
+var Story = {};
 
 function createStory(title, decorators, _module, param) {
   var story = React.storiesOf(title, _module);
   List.iter((function (dec) {
           story.addDecorator(dec);
-          return /* () */0;
+          
         }), decorators);
   return {
           add: (function (name, c) {
               story.add(name, c);
-              return /* () */0;
+              
             })
         };
 }
@@ -26,7 +26,7 @@ var Main = {
   createStory: createStory
 };
 
-var Notes = { };
+var Notes = {};
 
 function text(label, defaultValue, param) {
   return React$1.text(label, Js_null_undefined.fromOption(defaultValue));
@@ -52,9 +52,9 @@ var Knobs = {
   button: button
 };
 
-var Addons = { };
+var Addons = {};
 
-var Action = { };
+var Action = {};
 
 var bsExports = ["$$default"];
 
@@ -77,7 +77,7 @@ function addMeta(csfStory, name, decorators, parameters, param) {
     decorators: Js_null_undefined.fromOption(decorators),
     parameters: Js_null_undefined.fromOption(parameters)
   };
-  return /* () */0;
+  
 }
 
 var CSF = {

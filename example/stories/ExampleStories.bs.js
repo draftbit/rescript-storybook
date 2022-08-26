@@ -1,7 +1,7 @@
 
 
 import * as React from "react";
-import * as Js_dict from "bs-platform/lib/es6/js_dict.js";
+import * as Js_dict from "rescript/lib/es6/js_dict.js";
 import * as MyButton from "../src/MyButton.bs.js";
 import * as Storybook from "../bindings/Storybook.bs.js";
 import * as React$1 from "@storybook/react";
@@ -11,9 +11,9 @@ import * as React$2 from "@storybook/addon-knobs/react";
 var _module = module;
 
 React$1.storiesOf("My First Reason Story", _module).addDecorator(React$2.withKnobs).add("render MyButton test", (function (param) {
-                  return React.createElement(MyButton.make, { });
+                  return React.createElement(MyButton.make, {});
                 })).add("text knob test", (function (param) {
-                var name = Storybook.Knobs.text("Name", "Patrick", /* () */0);
+                var name = Storybook.Knobs.text("Name", "Patrick", undefined);
                 var age = React$2.number("Age", 30, {
                       range: false,
                       min: 19,
@@ -56,19 +56,19 @@ React$1.storiesOf("My First Reason Story", _module).addDecorator(React$2.withKno
                     }, "Selected color: " + color);
         })).add("select knob test with a Dict as options", (function (param) {
         var options = Js_dict.fromArray([
-              /* tuple */[
+              [
                 "Red",
                 "red"
               ],
-              /* tuple */[
+              [
                 "Blue",
                 "blue"
               ],
-              /* tuple */[
+              [
                 "Yellow",
                 "yellow"
               ],
-              /* tuple */[
+              [
                 "None",
                 ""
               ]
@@ -88,7 +88,7 @@ React$1.storiesOf("My Second Reason Story", _module).add("first chapter", (funct
                   }, "HI");
       }));
 
-var Action = /* alias */0;
+var Action;
 
 export {
   Action ,

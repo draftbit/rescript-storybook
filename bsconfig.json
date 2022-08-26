@@ -1,15 +1,12 @@
 {
-  "name": "bs-storybook",
-  "namespace": true,
-  "bsc-flags": [
-    "-bs-super-errors"
-  ],
+  "name": "rescript-storybook",
+  "namespace": "storybook",
   "version": "0.1.0",
   "sources": [
     "src"
   ],
   "bs-dependencies": [
-    "reason-react"
+    "@rescript/react"
   ],
   "reason": {
     "react-jsx": 3
