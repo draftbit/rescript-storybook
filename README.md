@@ -70,7 +70,7 @@ Storybook uses a reference to the `module` global provided by webpack to facilit
 If you'd prefer to use the newer [Component Story Format](https://storybook.js.org/docs/formats/component-story-format/), you can do that as well:
 
 ```reason
-open BsStorybook;
+open Storybook;
 
 let default = CSF.make(~title="My CSF Story", ());
 
