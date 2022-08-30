@@ -1,5 +1,5 @@
 @val @module("@storybook/addon-knobs/react")
-external withKnobs: Main.decorator = ""
+external withKnobs: Main.decorator = "withKnobs"
 
 @val @module("@storybook/addon-knobs/react")
 external extText: (string, Js.null_undefined<string>) => string = "text"

@@ -21,7 +21,7 @@
   "license": "MIT",
   "devDependencies": {
     "@rescript/react": "^0.10.3",
-    "rescript": "^9.1.4"
+    "rescript": "10"
   },
   "peerDependencies": {
     "@rescript/react": "^0.10.3",
