@@ -7,7 +7,7 @@
   resolved "https://registry.yarnpkg.com/@rescript/react/-/react-0.10.3.tgz#a2a8bed6b017940ec26c2154764b350f50348889"
   integrity sha512-Lf9rzrR3bQPKJjOK3PBRa/B3xrJ7CqQ1HYr9VHPVxJidarIJJFZBhj0Dg1uZURX+Wg/xiP0PHFxXmdj2bK8Vxw==
 
-rescript@^9.1.4:
-  version "9.1.4"
-  resolved "https://registry.yarnpkg.com/rescript/-/rescript-9.1.4.tgz#1eb126f98d6c16942c0bf0df67c050198e580515"
-  integrity sha512-aXANK4IqecJzdnDpJUsU6pxMViCR5ogAxzuqS0mOr8TloMnzAjJFu63fjD6LCkWrKAhlMkFFzQvVQYaAaVkFXw==
+rescript@10:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/rescript/-/rescript-10.0.0.tgz#8460bc6f7d94bc580eac02d7c7efdf0a470916b8"
+  integrity sha512-LhNg/4+0j8NvoFeslgAeYLlzUwkq6kR6l6v8BnZ61VDTxopK2l96uT1lq5lv1aMxzMDynvE2qnX0zalre+6XxA==
