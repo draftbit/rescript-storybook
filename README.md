@@ -181,7 +181,7 @@ type selectOptions = {
   two: string
 };
 
-let options : Knobs.selectConfig(selectOptions) = {
+let options : Knobs.selectConfig<selectOptions> = {
   one: "Hello",
   two: "Hi"
 };
