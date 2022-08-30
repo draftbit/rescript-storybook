@@ -55,7 +55,7 @@ Note that in the above example, we're assuming the convention of each module con
 Here's a basic story in its entirety:
 
 ```reason
-open BsStorybook.Story;
+open Storybook.Story;
 
 let _module = [%bs.raw "module"];
 
