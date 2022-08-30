@@ -55,7 +55,7 @@ Note that in the above example, we're assuming the convention of each module con
 Here's a basic story in its entirety:
 
 ```reason
-open BsStorybook.Story;
+open Storybook.Story;
 
 let _module = [%bs.raw "module"];
 
@@ -70,7 +70,7 @@ Storybook uses a reference to the `module` global provided by webpack to facilit
 If you'd prefer to use the newer [Component Story Format](https://storybook.js.org/docs/formats/component-story-format/), you can do that as well:
 
 ```reason
-open BsStorybook;
+open Storybook;
 
 let default = CSF.make(~title="My CSF Story", ());
 
@@ -181,7 +181,7 @@ type selectOptions = {
   two: string
 };
 
-let options : Knobs.selectConfig(selectOptions) = {
+let options : Knobs.selectConfig<selectOptions> = {
   one: "Hello",
   two: "Hi"
 };
